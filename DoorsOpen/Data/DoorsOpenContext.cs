@@ -17,5 +17,7 @@ namespace DoorsOpen.Data
         public DbSet<DoorsOpen.Models.Blurbinfo> Blurbinfo { get; set; } = default!;
 
         public DbSet<DoorsOpen.Models.Genredata> Genredata { get; set; }
+
+        public DbSet<DoorsOpen.Models.Userinfo> Userinfo { get; set; }
     }
 }
