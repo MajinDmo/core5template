@@ -1,4 +1,4 @@
-using DoorsOpen.Data;
+﻿using DoorsOpen.Data;
 using DoorsOpen.Helper;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
@@ -138,6 +138,9 @@ namespace DoorsOpen
             });
 
             services.AddControllersWithViews();
+
+            services.AddDbContext<DoorsOpenContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("DoorsOpenContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
